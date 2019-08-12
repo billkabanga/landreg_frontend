@@ -1,0 +1,33 @@
+html {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/landImage.jpg);
+}
+
+.auth-form {
+  display: grid;
+  justify-content: center;
+  margin: 10% auto;
+  width: 25%;
+  padding: 20px;
+  background-image: linear-gradient(green, yellowgreen, yellowgreen);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 0.3em;
+  color: #FFFFFF;
+  &__heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .MuiInput-underline:before {
+    border-bottom: 1px solid #ffff;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px yellowgreen inset; 
+  -webkit-text-fill-color: #333;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px yellowgreen inset;
+  -webkit-text-fill-color: #333;
+} 
