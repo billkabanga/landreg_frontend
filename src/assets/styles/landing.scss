@@ -1,0 +1,142 @@
+.navbar {
+  margin-top: 0;
+  background-image: linear-gradient(green, yellowgreen, yellowgreen);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  height: 100px;
+  width: 100%;
+  position: relative;
+
+  &__header {
+    display: inline;
+
+    &__brand {
+      display: inline-block;
+      font-size: 22px;
+      padding: 35px;
+      color: #fff;
+    }
+  }
+
+  &__links {
+    float: right;
+    font-size: 18px;
+    padding: 25px 35px;
+
+    & > a {
+      display: inline-block;
+      padding: 18px 15px;
+      text-decoration: none;
+      color: #fff;
+      transition: ease-in 350ms;
+      &:hover {
+        color: #333;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &> #navbar-check {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #navbar-check {
+    display: inline;
+  }
+  .navbar__btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding-top: 25px;
+    padding-right: 10px;
+
+    & > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+      }
+      & > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #333;
+      }
+    }
+  }
+
+  .navbar  #navbar-check:checked ~ .navbar__btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+
+  .navbar__links {
+    display: block;
+    width: 100%;
+    background-image: linear-gradient(yellowgreen, yellowgreen,green);
+    height: 0px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    padding: 0;
+    & > a {
+      display: block;
+      width: 100%;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .navbar > #navbar-check:not(checked) ~ .navbar__links {
+    height: 0px;
+  }
+
+  .navbar > #navbar-check:checked ~ .navbar__links {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
+.body-container {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/mountains.jpg);
+  height: 450px;
+  background-size: cover;
+  &__header {
+    display: grid;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-left: 24%;
+    color: #fff;
+    padding: 120px 0px 0px 25px;
+    &__title {
+      text-align: center;
+    }
+
+    &__para {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    padding: 25px 0px;
+    grid-column-gap: 50px;
+    background-color: #333;
+  }
+}
+

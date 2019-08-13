@@ -3,7 +3,7 @@ import SignUpComponent from '../../components/auth/SignUp';
 
 const SignUpView = () => {
   return (
-    <div>
+    <div className="login">
       <SignUpComponent />
     </div>
   )
