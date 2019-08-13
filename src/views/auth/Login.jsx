@@ -3,7 +3,7 @@ import LoginComponent from '../../components/auth/LogIn';
 
 const LoginView = () => {
   return (
-    <div>
+    <div className="login">
       <LoginComponent />
     </div>
   )
