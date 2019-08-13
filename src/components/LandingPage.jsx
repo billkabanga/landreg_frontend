@@ -11,7 +11,7 @@ const useStyles = theme => ({
     color: "#fff",
     padding: "10px 25px",
     "&:hover": {
-      background: "#FF7F7F"
+      background: "#7ec0ee"
     } 
   },
   ButtonArea: {
