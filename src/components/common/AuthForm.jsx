@@ -27,28 +27,32 @@ const useStyles = makeStyles(theme => ({
 
 const AuthForm = (props) => {
   const classes = useStyles();
-  const { signup } = props;
+  const { signup, handleInput, handleClick } = props;
 
   return (
     <div className="auth-form">
       <h3 className="auth-form__heading">{signup ? 'Sign Up' : 'Log In'}</h3>
-      <div className={classes.Input}>
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item>
-            <AccountCircle />
-          </Grid>
-          <Grid item>
-            <TextField id="input-with-icon-grid" label="username" />
-          </Grid>
-        </Grid>
-      </div>
+      {
+        signup && (
+          <div className={classes.Input}>
+            <Grid container spacing={1} alignItems="flex-end">
+              <Grid item>
+                <AccountCircle />
+              </Grid>
+              <Grid item>
+                <TextField id="input-with-icon-grid" label="username" onChange={handleInput} name="username"/>
+              </Grid>
+            </Grid>
+          </div>
+        )
+      }
       <div className={classes.Input}>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item>
             <ContactPhone />
           </Grid>
           <Grid item>
-            <TextField id="input-with-icon-grid" label="Phone no."/>
+            <TextField id="input-with-icon-grid" label="Phone no." onChange={handleInput} name="phone_number"/>
           </Grid>
         </Grid>
       </div>
@@ -58,12 +62,12 @@ const AuthForm = (props) => {
             <Lock />
           </Grid>
           <Grid item>
-            <TextField type="password" id="input-with-icon-grid" label="Password" name="password"/>
+            <TextField type="password" id="input-with-icon-grid" label="Password" name="password" onChange={handleInput}/>
           </Grid>
         </Grid>
       </div>
       <div className={classes.ButtonArea}>
-        <Button  className={classes.Button}>{signup ? 'Sign Up' : 'Log In'}</Button>
+        <Button  className={classes.Button} onClick={handleClick} >{signup ? 'Sign Up' : 'Log In'}</Button>
       </div>
     </div>
   )
