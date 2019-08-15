@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import '../assets/styles/landing.scss';
 import { withStyles } from "@material-ui/core/styles";
 import ContentCard from './common/Card';
+import Footer from './Footer';
 
 const useStyles = theme => ({
   Button: {
@@ -30,7 +31,7 @@ class LandingPage extends Component {
         <NavBar />
         <div className="body-container">
           <div className="body-container__header">
-            <h3 className="body-container__header__title">Lorem ipsum is placeholder text commonly used in the graphic</h3>
+            <h3 className="body-container__header__title">Digital Land Forum</h3>
             <p className="body-container__header__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -44,6 +45,9 @@ class LandingPage extends Component {
           <ContentCard />
           <ContentCard />
           <ContentCard />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     )

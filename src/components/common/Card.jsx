@@ -15,19 +15,7 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
-  },
-  AvatarArea: {
-    background: "#fff",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 16
-  },
-  Avatar: {
-    width: 80,
-    height: 80,
-    border: "solid 0.1em #333"
-  },
+  }
 });
 
 const  ContentCard = () => {
@@ -52,9 +40,6 @@ const  ContentCard = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
