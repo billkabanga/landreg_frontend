@@ -9,7 +9,7 @@ const NavBar = (props) => {
       <input type="checkbox" id="navbar-check"/>
       <div className="navbar__header">
         <div className="navbar__header__brand">
-          LandReg
+          DigiLand
         </div>
       </div>
       <div className="navbar__btn">
@@ -22,8 +22,8 @@ const NavBar = (props) => {
       { authUser ? (
           <div className="navbar__links">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="#">About</NavLink>
-              <NavLink to="#">Logout</NavLink>
+              <NavLink to="#">Register Land</NavLink>
+              <NavLink to="/login">Logout</NavLink>
           </div>
       ) : (
           <div className="navbar__links">

@@ -44,7 +44,41 @@
   }
 }
 
-@media (max-width: 600px) {
+
+.body-container {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/mountains.jpg);
+  height: 450px;
+  background-size: cover;
+  &__header {
+    display: grid;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-left: 24%;
+    color: #fff;
+    padding: 120px 0px 0px 25px;
+    &__title {
+      text-align: center;
+    }
+
+    &__para {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    padding: 25px 0px;
+    grid-column-gap: 50px;
+    background-color: #333;
+  }
+}
+
+@media only screen and (max-width: 640px) {
   #navbar-check {
     display: inline;
   }
@@ -105,38 +139,69 @@
     height: auto;
     overflow-y: auto;
   }
-}
 
-.body-container {
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/mountains.jpg);
-  height: 450px;
-  background-size: cover;
-  &__header {
-    display: grid;
-    align-items: center;
-    width: 50%;
-    margin: 0 auto;
-    margin-left: 24%;
-    color: #fff;
-    padding: 120px 0px 0px 25px;
-    &__title {
-      text-align: center;
+  .body-container {
+    &__header {
+      display: grid;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      color: #fff;
+      padding: 50px 0px;
+      &__title {
+        text-align: center;
+      }
+  
+      &__para {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+      }
     }
-
-    &__para {
-      text-align: center;
+  
+    &__cards {
+      display: grid;
+      grid-auto-flow: row;
+      justify-content: center;
+      padding: 25px 0px;
+      grid-row-gap: 25px;
+      background-color: #333;
       width: 100%;
-      margin: auto;
     }
   }
+}
 
-  &__cards {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    padding: 25px 0px;
-    grid-column-gap: 50px;
-    background-color: #333;
+@media only screen and (max-width: 1366px) and (min-width: 768px) {
+  .body-container {
+    height: 50vh;
+    &__header {
+      display: grid;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      color: #fff;
+      padding: 150px 0px;
+      &__title {
+        text-align: center;
+      }
+  
+      &__para {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  
+    &__cards {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: center;
+      padding: 25px 0px;
+      grid-row-gap: 25px;
+      background-color: #333;
+      width: 100%;
+      height: 38.8vh;
+    }
   }
 }
 

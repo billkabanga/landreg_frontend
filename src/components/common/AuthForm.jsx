@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/styles';
 import Lock from '@material-ui/icons/Lock';
 import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom';
 import '../../assets/styles/authForm.scss';
 
 const useStyles = makeStyles(theme => ({
@@ -68,6 +69,9 @@ const AuthForm = (props) => {
       </div>
       <div className={classes.ButtonArea}>
         <Button  className={classes.Button} onClick={handleClick} >{signup ? 'Sign Up' : 'Log In'}</Button>
+      </div>
+      <div className="auth-form__link">
+        <NavLink to={signup ? '/login' : '/signup'}>{signup ? 'Already have an account?' : 'Create new account.'}</NavLink>
       </div>
     </div>
   )

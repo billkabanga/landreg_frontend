@@ -24,7 +24,7 @@ class LoginComponent extends Component {
     const loginResponse = await postData('auth/login/', data)
     if (loginResponse.data) {
       notify(successMessage, 'success');
-      this.props.history.push("/");
+      this.props.history.push("/home");
     } else {
       notify(errorMessage, 'error');
     }
